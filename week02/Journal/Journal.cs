@@ -25,6 +25,15 @@ public class Journal
 
     public void SaveToFile(string file)
     {
+        using (StreamWriter writer = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            {
+                writer.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
+            }
+        }
+        Console.WriteLine("Journal saved successfully.");
+    }
 
     }
 
