@@ -9,6 +9,17 @@ public class Journal
 
     public void DisplayAll()
     {
+        if (_entries.Count == 0)
+        {
+            Console.WriteLine("No journal entires found.");
+        }
+        else
+        {
+            foreach (Entry entry in _entries)
+            {
+                entry.Display();
+            }
+        }
 
     }
 
