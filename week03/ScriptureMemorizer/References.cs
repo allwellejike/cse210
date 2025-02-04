@@ -4,3 +4,17 @@ public class Reference
     public int Chapter { get; private set; }
     public int StartVerse { get; private set; }
     public int? EndVerse { get; private set; }
+
+ public Reference(string book, int chapter, int startVerse, int? endVerse = null)
+    {
+        Book = book;
+        Chapter = chapter;
+        StartVerse = startVerse;
+        EndVerse = endVerse;
+    }
+
+public string GetDisplayText()
+    {
+        return EndVerse == null ? $"{Book} {Chapter}:{StartVerse}" : $"{Book} {Chapter}:{StartVerse}-{EndVerse}";
+    }
+}
