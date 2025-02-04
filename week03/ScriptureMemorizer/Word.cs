@@ -8,3 +8,8 @@ public class Word
         Text = text;
         IsHidden = false;
     }
+
+     public void Hide()
+    {
+        IsHidden = true;
+    }
