@@ -26,4 +26,7 @@ public class Scripture
         }
     }
 
-    
+    public string GetDisplayText()
+    {
+        return $"{_reference.GetDisplayText()} - " + string.Join(" ", _words.Select(w => w.GetDisplayText()));
+    }
