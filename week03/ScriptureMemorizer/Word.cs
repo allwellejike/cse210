@@ -13,3 +13,9 @@ public class Word
     {
         IsHidden = true;
     }
+
+    public string GetDisplayText()
+    {
+        return IsHidden ? new string('_', Text.Length) : Text;
+    }
+}
