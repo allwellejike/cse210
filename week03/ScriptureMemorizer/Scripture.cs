@@ -12,3 +12,18 @@ public class Scripture
         _reference = reference;
         _words = text.Split(' ').Select(word => new Word(word)).ToList();
     }
+
+     public void HideRandomWords(int count = 3)
+    {
+        Random random = new Random();
+        List<Word> visibleWords = _words.Where(w => !w.IsHidden).ToList();
+
+        for (int i = 0; i < count && visibleWords.Count > 0; i++)
+        {
+            Word wordToHide = visibleWords[random.Next(visibleWords.Count)];
+            wordToHide.Hide();
+            visibleWords.Remove(wordToHide);
+        }
+    }
+
+    
