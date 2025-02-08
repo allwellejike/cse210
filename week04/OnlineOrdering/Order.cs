@@ -25,3 +25,20 @@ public class Order
         }
         total += _customer.GetUSAStatus() ? 5 : 35;
         return total;
+
+         public string GetPackingLabel()
+    {
+        string label = "Packing Label:\n";
+        foreach (var product in _products)
+        {
+            label += $"{product.GetName()} (ID: {product.GetId()})\n";
+        }
+        return label;
+    }
+
+    // Commit: Create method to get shipping label
+    public string GetShippingLabel()
+    {
+        return $"Shipping Label:\n{_customer.GetShippingLabel()}";
+    }
+}
