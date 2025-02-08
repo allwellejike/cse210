@@ -15,3 +15,13 @@ class Program
         Order order2 = new Order(customer2);
         order2.AddProduct(new Product("Headphones", "HDP789", 49.99m, 1));
         order2.AddProduct(new Product("Keyboard", "KEY321", 79.99m, 1));
+
+        Console.WriteLine(order1.GetPackingLabel());
+        Console.WriteLine(order1.GetShippingLabel());
+        Console.WriteLine($"Total Cost: ${order1.CalculateTotalCost():0.00}\n");
+
+        Console.WriteLine(order2.GetPackingLabel());
+        Console.WriteLine(order2.GetShippingLabel());
+        Console.WriteLine($"Total Cost: ${order2.CalculateTotalCost():0.00}");
+    }
+}
