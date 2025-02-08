@@ -11,3 +11,8 @@ public class Address
         _state = state;
         _country = country;
     }
+
+     public bool GetUSAStatus()
+    {
+        return _country.ToLower() == "usa";
+    }
