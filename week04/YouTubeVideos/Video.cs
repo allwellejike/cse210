@@ -20,3 +20,8 @@ public class Video
     {
         _comments.Add(comment);
     }
+
+     public int GetNumberOfComments()
+    {
+        return _comments.Count;
+    }
