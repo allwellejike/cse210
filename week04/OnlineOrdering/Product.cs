@@ -23,3 +23,4 @@ public class Product
 
     public string GetName() => _name;
     public string GetId() => _id;
+}

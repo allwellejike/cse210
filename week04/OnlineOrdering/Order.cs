@@ -10,7 +10,7 @@ public class Order
         _products = new List<Product>();
     }
 
-     public void AddProduct(Product product)
+    public void AddProduct(Product product)
     {
         _products.Add(product);
     }
@@ -25,8 +25,9 @@ public class Order
         }
         total += _customer.GetUSAStatus() ? 5 : 35;
         return total;
+    }
 
-         public string GetPackingLabel()
+    public string GetPackingLabel()
     {
         string label = "Packing Label:\n";
         foreach (var product in _products)
