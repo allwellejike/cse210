@@ -9,3 +9,19 @@ public class Order
         _customer = customer;
         _products = new List<Product>();
     }
+
+     public void AddProduct(Product product)
+    {
+        _products.Add(product);
+    }
+
+
+    public decimal CalculateTotalCost()
+    {
+        decimal total = 0;
+        foreach (var product in _products)
+        {
+            total += product.GetTotalCost();
+        }
+        total += _customer.GetUSAStatus() ? 5 : 35;
+        return total;
