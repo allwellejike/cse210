@@ -15,3 +15,8 @@ public class Product
         _price = price;
         _quantity = quantity;
     }
+
+      public decimal GetTotalCost()
+    {
+        return _price * _quantity;
+    }
