@@ -15,3 +15,8 @@ public class Video
         Length = length;
         _comments = new List<Comment>();
     }
+
+    public void AddComment(Comment comment)
+    {
+        _comments.Add(comment);
+    }
