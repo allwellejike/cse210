@@ -9,3 +9,8 @@ public class Customer
         _name = name;
         _address = address;
     }
+
+     public bool GetUSAStatus()
+    {
+        return _address.GetUSAStatus();
+    }
