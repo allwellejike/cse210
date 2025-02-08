@@ -16,3 +16,9 @@ public class Address
     {
         return _country.ToLower() == "usa";
     }
+
+     public string GetFullAddress()
+    {
+        return $"{_street}\n{_city}, {_state}\n{_country}";
+    }
+}
