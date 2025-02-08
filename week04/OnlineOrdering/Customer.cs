@@ -14,3 +14,9 @@ public class Customer
     {
         return _address.GetUSAStatus();
     }
+
+      public string GetShippingLabel()
+    {
+        return $"{_name}\n{_address.GetFullAddress()}";
+    }
+}
