@@ -38,3 +38,15 @@ abstract class Activity
         Console.WriteLine();
     }
 
+     protected abstract void Run();
+
+    // End the activity and log completion
+    protected void End()
+    {
+        Console.WriteLine("Good job!");
+        Console.WriteLine($"You completed {_name} for {_duration} seconds.");
+        ShowSpinner(3);
+        ActivityTracker.LogActivity(_name, _duration);
+    }
+}
+
