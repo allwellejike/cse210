@@ -1,3 +1,4 @@
+
 class BreathingActivity : Activity
 {
     public BreathingActivity() : base("Breathing Activity", "This activity helps you relax by guiding your breathing.") { }
@@ -13,5 +14,10 @@ class BreathingActivity : Activity
             Countdown(4);
             elapsed += 8;
         }
+    }
+
+    private void Countdown(int v)
+    {
+        throw new NotImplementedException();
     }
 }
