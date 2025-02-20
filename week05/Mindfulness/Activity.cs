@@ -27,3 +27,14 @@ abstract class Activity
         Run();
         End();
     }
+
+    protected void ShowSpinner(int seconds)
+    {
+        for (int i = 0; i < seconds; i++)
+        {
+            Console.Write(".");
+            Thread.Sleep(1000);
+        }
+        Console.WriteLine();
+    }
+
