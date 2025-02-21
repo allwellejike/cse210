@@ -1,27 +1,14 @@
-using System;
-using System.Collections.Generic;
-
-// Base class for all activities
-abstract class Activity
+class Swimming : Activity
 {
-    private DateTime _date;
-    private int _minutes;
-
-    public Activity(DateTime date, int minutes)
+    private int _laps;
+    private const double LapDistance = 50.0 / 1000; // 50m per lap converted to km
+    
+    public Swimming(DateTime date, int minutes, int laps) : base(date, minutes)
     {
-        _date = date;
-        _minutes = minutes;
+        _laps = laps;
     }
-
-    public int GetMinutes() => _minutes;
-    public DateTime GetDate() => _date;
-
-     public abstract double GetDistance();
-    public abstract double GetSpeed();
-    public abstract double GetPace();
-
-    public virtual string GetSummary()
-    {
-        return $"{_date:dd MMM yyyy} {this.GetType().Name} ({_minutes} min) - Distance: {GetDistance():F1} km, Speed: {GetSpeed():F1} kph, Pace: {GetPace():F2} min/km";
-    }
+    
+    public override double GetDistance() => _laps * LapDistance;
+    public override double GetSpeed() => (GetDistance() / GetMinutes()) * 60;
+    public override double GetPace() => GetMinutes() / GetDistance();
 }
