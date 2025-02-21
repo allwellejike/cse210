@@ -8,20 +8,21 @@ class BreathingActivity : Activity
         int elapsed = 0;
         while (elapsed < _duration)
         {
-            Console.WriteLine("Breathe in...");
+            Console.Write("Breathe in... ");
             Countdown(4);
-            Console.WriteLine("Breathe out...");
+            Console.Write("Breathe out... ");
             Countdown(4);
             elapsed += 8;
         }
     }
 
     private void Countdown(int seconds)
-{
-    for (int i = seconds; i > 0; i--)
     {
-        Console.Write(i + " ");
-        Thread.Sleep(1000);
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i + " ");
+            Thread.Sleep(1000);
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
