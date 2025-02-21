@@ -16,8 +16,12 @@ class BreathingActivity : Activity
         }
     }
 
-    private void Countdown(int v)
+    private void Countdown(int seconds)
+{
+    for (int i = seconds; i > 0; i--)
     {
-        throw new NotImplementedException();
+        Console.Write(i + " ");
+        Thread.Sleep(1000);
     }
+    Console.WriteLine();
 }
