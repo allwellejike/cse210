@@ -10,3 +10,14 @@ class GoalManager
     public void AddGoal(Goal goal)
     {
         _goals.Add(goal);
+    }
+
+      
+    public void DisplayGoals()
+    {
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"{i+1}. {_goals[i].GetDetailsString()}");
+        }
+        Console.WriteLine($"Total Score: {_score}");
+    }
