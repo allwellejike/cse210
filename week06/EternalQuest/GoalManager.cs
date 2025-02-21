@@ -30,3 +30,16 @@ class GoalManager
             _score += _goals[index].RecordEvent();
         }
     }
+
+    public void SaveGoals()
+    {
+        using (StreamWriter writer = new StreamWriter("goals.txt"))
+        {
+            writer.WriteLine(_score);
+            foreach (Goal goal in _goals)
+            {
+                writer.WriteLine(goal.GetDetailsString());
+            }
+        }
+    }
+    
