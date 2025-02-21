@@ -12,3 +12,8 @@ abstract class Goal
         _description = description;
         _points = points;
     }
+
+     public abstract int RecordEvent();
+    public abstract string GetDetailsString();
+    public virtual bool IsComplete() { return false; }
+}
