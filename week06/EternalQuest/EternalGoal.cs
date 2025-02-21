@@ -6,3 +6,9 @@ class EternalGoal : Goal
     {
         return _points;
     }
+
+      public override string GetDetailsString()
+    {
+        return ($"[∞] {_name} - {_description}");
+    }
+}
