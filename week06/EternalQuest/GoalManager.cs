@@ -21,3 +21,12 @@ class GoalManager
         }
         Console.WriteLine($"Total Score: {_score}");
     }
+
+      
+    public void RecordEvent(int index)
+    {
+        if (index >= 0 && index < _goals.Count)
+        {
+            _score += _goals[index].RecordEvent();
+        }
+    }
