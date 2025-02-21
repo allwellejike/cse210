@@ -42,4 +42,14 @@ class GoalManager
             }
         }
     }
+
+    public void LoadGoals()
+    {
+        if (File.Exists("goals.txt"))
+        {
+            string[] lines = File.ReadAllLines("goals.txt");
+            _score = int.Parse(lines[0]);
+        }
+    }
+}
     
